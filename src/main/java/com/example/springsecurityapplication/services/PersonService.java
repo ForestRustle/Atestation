@@ -61,27 +61,13 @@ public class PersonService {
 
 
 
-//    public void changePassword(int id, String password) {
-//        personRepository.updatePersonById(id,passwordEncoder.encode(password));
-//    }
 
-//    public void changePasswordUser(int id, String password) {
-//        personRepository.updatePersonById(id,passwordEncoder.encode(password));
-//    }
 
     @Transactional
     public void changePassword(int id, String password){
         personRepository.updatePersonById(id, passwordEncoder.encode(password));
     }
-//@Transactional
-//    public Person getAllPersons(){int id, Person person){
-//    person.setId(id);
-//        orderRepository.save(order);
-//    }
 
-//    public void changePassword(int id, String password) {
-//        personRepository.updatePersonById(id,passwordEncoder.encode(password));
-//    }
 // Данный метод позволяет получить всех пользователей
 public List<Person> getAllPerson(){
     return personRepository.findAll();

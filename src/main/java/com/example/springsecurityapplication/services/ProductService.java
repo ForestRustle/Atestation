@@ -60,10 +60,4 @@ public class ProductService {
         return product_db.orElse(null);
     }
 
-
-//    @Transactional
-//    public Order getAllOrders(int id,Order order) {
-//        order.setId(id);
-//        orderRepository.save(order);
-//    }
 }

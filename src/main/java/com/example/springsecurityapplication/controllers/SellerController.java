@@ -41,8 +41,6 @@ public class SellerController {
         this.categoryRepository = categoryRepository;
     }
 
-    //    @PreAuthorize("hasRole('ROLE_ADMIN') and hasRole('')")
-//@PreAuthorize("hasRole('ROLE_ADMIN') or hasRole('')")
 
     // Метод по отображению главной страницы продавца с выводом товаров
     @GetMapping()

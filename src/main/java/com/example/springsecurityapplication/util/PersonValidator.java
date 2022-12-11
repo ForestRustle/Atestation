@@ -30,12 +30,6 @@ public class PersonValidator implements Validator {
         }
     }
 
-//    public void findUser(Object target, Errors errors) {
-//        Person person = (Person) target;
-//        if(personService.getPersonFindByLogin(person)==null){
-//            errors.rejectValue("login","","Пользователя с таким логином не существует");
-//        }
-//    }
 
     public void findUser(Object target, Errors errors) {
         Person person = (Person) target;

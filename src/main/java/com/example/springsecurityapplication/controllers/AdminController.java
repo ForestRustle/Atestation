@@ -26,7 +26,7 @@ import java.util.UUID;
 
 @Controller
 @RequestMapping("/admin")
-//@PreAuthorize("hasAnyAuthority('ROLE_ADMIN')")
+
 public class AdminController {
 
     @Value("${upload.path}")
@@ -50,8 +50,6 @@ public class AdminController {
         this.orderRepository = orderRepository;
     }
 
-    //    @PreAuthorize("hasRole('ROLE_ADMIN') and hasRole('')")
-//@PreAuthorize("hasRole('ROLE_ADMIN') or hasRole('')")
 
     // Метод по отображению главной страницы администратора с выводом товаров
     @GetMapping()

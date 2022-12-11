@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.validation.Valid;
 
-// http:localhost:8080/auth/login
 @Controller
 @RequestMapping("/auth")
 public class AuthController {
@@ -28,33 +27,6 @@ public class AuthController {
         this.personValidator = personValidator;
         this.personService = personService;
     }
-//    @PostMapping("/registration/generate")
-//    public String gen(){
-//          return "redirect:/registration";
-//    }
-
-
-//@GetMapping("/changePassword")
-//public String changePassword(Model model){
-//        model.addAttribute("person",new Person());
-//        return "changePassword";
-//}
-//
-//@PostMapping("/changePassword")
-//public String changePasswordUser(@ModelAttribute("person") @Valid Person person,BindingResult bindingResult){
-//
-//    personValidator.findUser(person, bindingResult);
-//    if(bindingResult.hasErrors()){
-//        return "password";
-//    }
-//
-//       Person person_new_pass =personService.getPersonFindByLogin(person);
-//       int id = person_new_pass.getId();
-//       String password=person.getPassword();
-//
-//       personService.changePasswordUser(id,password);
-//       return "redirect:/index";
-//}
 
     @GetMapping("/password/change")
     public String changePassword(Model model){
