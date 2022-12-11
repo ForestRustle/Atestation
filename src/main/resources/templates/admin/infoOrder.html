@@ -17,7 +17,6 @@
       <option th:each="state : ${T(com.example.springsecurityapplication.enumm.Status).values()}"
               th:value="${state}" th:text="${state}"></option>
     </select>
-<!--    <a class="label"  href="/admin/orders" style="width:100%;">Просмотр</a>-->
     <button type="submit">Редактировать</button>
     <p th:text="${info_order.getProduct().getTitle()}"></p>
   </div>
