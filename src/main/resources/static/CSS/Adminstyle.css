@@ -1,0 +1,31 @@
+.body{
+    background-color:#87CEFA;
+}
+
+.grid{
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-gap: 20px 20px;
+    justify-content: space-between;
+    justify-self: center;
+    height: 15px;
+}
+.item{
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+img{
+    width: 200px;
+}
+
+.outBtn{
+    float: right;
+}
+
+.out{
+    color: #ececf1;
+    background-color: #3d4083
+}
