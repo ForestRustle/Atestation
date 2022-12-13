@@ -30,7 +30,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 public void configure(WebSecurity web) throws Exception {
     web
             .ignoring()
-            .antMatchers("/resources/**", "/static/**", "/CSS/**", "/JS/**");
+            .antMatchers("/resources/**", "/static/**", "/CSS/**", "/JS/**","/img/**");
 }
     private final PersonDetailsService personDetailsService;
 

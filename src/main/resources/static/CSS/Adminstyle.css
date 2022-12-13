@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
 .body{
     background-color:#87CEFA;
+    font-family: 'Lobster', cursive;
 }
 
 .grid{
@@ -19,6 +22,7 @@ h3{
 }
 img{
     width: 200px;
+    border-radius: 15px;
 }
 
 .outBtn{

@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8" >
     <title>Редактирование статуса</title>
+  <link th:href="@{/CSS/infoOrders.css}" type="text/css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 </head>
-<body style="background: #c4b3ef; margin: 30px">
-<div style="max-width: 600px">
+<body background="/static/img/Background.jpg">
+<div class="info" style="max-width: 600px">
 <form th:method="POST" th:action="@{/admin/orders/{id}(id=${info_order.getId()})}" th:object="${info_order}">
 
   <div th:each="order:${info_order}">
@@ -22,6 +26,9 @@
   </div>
 
 </form>
+  <div class="watch_product">
+    <a class="link" href="/product">Просмотр товаров</a>
+  </div>
 </div>
 </body>
 </html>
