@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 </head>
-<body class="body" style="font-size: 25px">
+<body class="body" style="font-size: 25px" background="/static/img/Background.jpg">
 <form th:method="POST" th:action="@{/admin/orders/search}">
     <h4 style="text-align: center">Поиск по четырем последний символам</h4>
     <div>
@@ -36,10 +36,10 @@
         </thead>
         <tbody>
         <tr th:each="order:${orders}">
-            <td><a th:href="@{/admin/orders/{id}(id=${order.getId()})}" th:text="${order.getId()}"></a></td>
-            <td th:text="${order.getNumber()}"></td>
-            <td th:text="${order.getStatus()}"></td>
-            <td th:text="${order.getPrice()}"></td>
+            <td><a style="color: #d4d9e3; text-decoration: none" th:href="@{/admin/orders/{id}(id=${order.getId()})}" th:text="${order.getId()}"></a></td>
+            <td  th:text="${order.getNumber()}"></td>
+            <td  th:text="${order.getStatus()}"></td>
+            <td  th:text="${order.getPrice()}"></td>
         </tr>
         </tbody>
     </table>
