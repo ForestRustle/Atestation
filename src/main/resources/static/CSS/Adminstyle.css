@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 .body{
-    background-color:#87CEFA;
+    /*background-color:#87CEFA;*/
     font-family: 'Lobster', cursive;
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
 }
 
 .grid{
@@ -19,6 +20,7 @@
 }
 h3{
     text-align: center;
+    margin: 20px;
 }
 img{
     width: 200px;
@@ -30,6 +32,15 @@ img{
 }
 
 .out{
-    color: #ececf1;
-    background-color: #3d4083
+    background-color: #3d4083;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px 20px;
+    position: relative;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, .4);
+    font-weight: 300;
+    font-family: 'Lobster', cursive;
+    letter-spacing: 1px;
+    border-radius: 0px 5px 0px 5px;
 }

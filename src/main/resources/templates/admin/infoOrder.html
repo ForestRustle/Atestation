@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 </head>
-<body background="/static/img/Background.jpg">
+<body background="/static/img/Background.jpg" style="color: #ececf1">
 <div class="info" style="max-width: 600px">
 <form th:method="POST" th:action="@{/admin/orders/{id}(id=${info_order.getId()})}" th:object="${info_order}">
 
@@ -27,7 +27,7 @@
 
 </form>
   <div class="watch_product">
-    <a class="link" href="/product">Просмотр товаров</a>
+    <a class="link" style="color: #ececf1; text-decoration: none;" href="/product">Просмотр товаров</a>
   </div>
 </div>
 </body>

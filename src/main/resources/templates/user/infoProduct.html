@@ -3,9 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Информация о товаре</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link th:href="@{/CSS/infoProduct.css}" type="text/css" rel="stylesheet">
 </head>
-<body style="background: linear-gradient(to bottom, #c4b3ef 0%, #eeb08a 100%)">
+<body style="background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);">
 <a style="padding:20px" class="label" href="/auth/login">Назад</a>
+<a style="padding:20px" class="label" href="index.html">Просмотр товаров</a>
 <p th:text="'Наименование: ' + ${product.getTitle()}"></p>
 <p th:text="'Описание: ' + ${product.getDescription()}"></p>
 <p th:text="'Цена: ' + ${product.getPrice()}"></p>

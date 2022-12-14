@@ -5,17 +5,21 @@
     <title>Главная</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link th:href="@{/CSS/index.css}" type="text/css" rel="stylesheet">
 </head>
-<body style="background: linear-gradient(to bottom, #c4b3ef 0%, #eeb08a 100%); padding: 30px">
+<body style="padding: 30px">
 <h3>Личный кабинет пользователя</h3>
 <form method="post" th:action="@{/logout}">
-    <input type="submit" value="Выйти из личного кабинета">
+    <input class="for_inputs" type="submit" value="Выйти из личного кабинета">
 </form>
 <form method="get" th:action="@{/cart}">
-    <input type="submit" value="Корзина">
+    <input class="for_inputs" type="submit" value="Корзина">
 </form>
 <form method="get" th:action="@{/orders}">
-    <input type="submit" value="Заказы">
+    <input class="for_inputs" type="submit" value="Заказы">
 </form>
 
 <form th:method="POST" th:action="@{/product/search}">
@@ -51,17 +55,17 @@
         <label for="clothes">Одежда</label>
         <br>
         <br>
-        <input type="submit" value="Найти">
+        <input class="for_inputs" type="submit" value="Найти">
     </fieldset>
 </form>
 <br>
-<h3>Результат: </h3>
+
 <div th:each="product : ${search_product}">
     <img th:src="'/img/' + ${product.imageList[0].getFileName()}" width="300px">
     <a th:href="@{/product/info/{id}(id=${product.getId()})}" th:text="${product.getTitle()}"></a>
     <p class="price" th:text="'Цена: ' + ${product.getPrice()}"></p>
 </div>
-<hr>
+
 
 <div style="display: flex; justify-content: center">
     <h3>Доступные товары: </h3>
@@ -79,13 +83,12 @@
                            <p class="price" th:text="'Цена: ' + ${product.getPrice()}"></p>
 
                 <div class="actions">
-                    <div class="add-to-cart">
+                    <div>
                         <a th:href="@{/cart/add/{id}(id=${product.getId()})}" class="cart-button">Добавить в корзину</a>
                     </div>
             </div>
             </div>
         </div>
-
     </div>
 </div>
 </body>

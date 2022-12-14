@@ -10,12 +10,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
    </head>
-<body class="body">
+<body class="body" style="background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);">
 <h3 style="text-align: center">Личный кабинет администратора</h3>
 
 <div class="outBtn">
 <form  th:method="POST" th:action="@{/logout}">
-    <input class="out" type="submit" value="Выйти из личного кабинета">
+    <input style="padding: 11px 16px;" class="out" type="submit" value="Выйти из личного кабинета">
 </form>
 </div>
 
@@ -33,7 +33,6 @@
 </div>
 
 <h3>Каталог товаров</h3>
-<hr>
 <div>
     <div class="row row-cols-1 row-cols-md-5 g-4">
         <div style="justify-content: center"  th:each="product : ${products}">
