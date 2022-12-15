@@ -22,7 +22,7 @@
   <div class="shadow-lg p-3 mb-5 bg-body rounded">
 <div class="row row-cols-1 row-cols-md-5 g-4">
     <div th:each="img : ${product.getImageList()}">
-        <img th:src="'/img/' + ${img.getFileName()}" width="300px">
+        <img style="width: 250px" th:src="'/img/' + ${img.getFileName()}" width="300px">
     </div>
 </div>
 </div>
